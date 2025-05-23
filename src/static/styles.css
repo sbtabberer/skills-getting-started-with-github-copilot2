@@ -1,5 +1,164 @@
-* {
-  box-sizing: border-box;
+<!DOCTYPE html>* {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}  margin-bottom: 5px;.participants-section ul li {}  color: #4caf50;  list-style-type: disc;  padding-left: 20px;  margin-top: 5px;.participants-section ul {}  border-radius: 5px;  border: 1px solid #c5e1a5;  background-color: #f1f8e9;  padding: 10px;  margin-top: 10px;.participants-section {});  fetchActivities();  // Initialize app  });    }      console.error("Error signing up:", error);      messageDiv.classList.remove("hidden");      messageDiv.className = "error";      messageDiv.textContent = "Failed to sign up. Please try again.";    } catch (error) {      }, 5000);        messageDiv.classList.add("hidden");      setTimeout(() => {      // Hide message after 5 seconds      messageDiv.classList.remove("hidden");      }        messageDiv.className = "error";        messageDiv.textContent = result.detail || "An error occurred";      } else {        signupForm.reset();        messageDiv.className = "success";        messageDiv.textContent = result.message;      if (response.ok) {      const result = await response.json();      );        }          method: "POST",        {        `/activities/${encodeURIComponent(activity)}/signup?email=${encodeURIComponent(email)}`,      const response = await fetch(    try {    const activity = document.getElementById("activity").value;    const email = document.getElementById("email").value;    event.preventDefault();  signupForm.addEventListener("submit", async (event) => {  // Handle form submission  }    }      console.error("Error fetching activities:", error);      activitiesList.innerHTML = "<p>Failed to load activities. Please try again later.</p>";    } catch (error) {      });        activitySelect.appendChild(option);        option.textContent = name;        option.value = name;        const option = document.createElement("option");        // Add option to select dropdown        activitiesList.appendChild(activityCard);        `;          </div>            </ul>              ${details.participants.map(participant => `<li>${participant}</li>`).join("")}            <ul>            <strong>Participants:</strong>          <div class="participants-section">          <p><strong>Availability:</strong> ${spotsLeft} spots left</p>          <p><strong>Schedule:</strong> ${details.schedule}</p>          <p>${details.description}</p>          <h4>${name}</h4>        activityCard.innerHTML = `        const spotsLeft = details.max_participants - details.participants.length;        activityCard.className = "activity-card";        const activityCard = document.createElement("div");      Object.entries(activities).forEach(([name, details]) => {      // Populate activities list      activitiesList.innerHTML = "";      // Clear loading message      const activities = await response.json();      const response = await fetch("/activities");    try {  async function fetchActivities() {  // Function to fetch activities from API  const messageDiv = document.getElementById("message");  const signupForm = document.getElementById("signup-form");  const activitySelect = document.getElementById("activity");  const activitiesList = document.getElementById("activities-list");document.addEventListener("DOMContentLoaded", () => {</html>  </body>    <script src="app.js"></script>    </footer>      <p>&copy; 2023 Mergington High School</p>    <footer>    </main>      </section>        <div id="message" class="hidden"></div>        </form>          <button type="submit">Sign Up</button>          </div>            </select>              <!-- Activity options will be loaded here -->              <option value="">-- Select an activity --</option>            <select id="activity" required>            <label for="activity">Select Activity:</label>          <div class="form-group">          </div>            <input type="email" id="email" required placeholder="your-email@mergington.edu" />            <label for="email">Student Email:</label>          <div class="form-group">        <form id="signup-form">        <h3>Sign Up for an Activity</h3>      <section id="signup-container">      </section>        </div>          <p>Loading activities...</p>          <!-- Activities will be loaded here -->        <div id="activities-list">        <h3>Available Activities</h3>      <section id="activities-container">    <main>    </header>      <h2>Extracurricular Activities</h2>      <h1>Mergington High School</h1>    <header>  <body>  </head>    <link rel="stylesheet" href="styles.css" />    <title>Mergington High School Activities</title>    <meta name="viewport" content="width=device-width, initial-scale=1.0" />    <meta charset="UTF-8" />  <head><html lang="en">  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -72,6 +231,17 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #555;
+}
+
+.activity-card ul li {
+  margin-bottom: 5px;
 }
 
 .form-group {
